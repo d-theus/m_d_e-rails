@@ -12,6 +12,9 @@
   margin-top: 5px;
   font-size: 10px;
 }
-#mde { overflow: auto; }
+#mde {
+  overflow: auto;
+  margin: 10px 0;
+}
 #mde:before{ overflow: auto; }
 

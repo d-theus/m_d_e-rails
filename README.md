@@ -19,6 +19,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install m_d_e-rails
+    $ gem install ace-rails-ap
+    $ gem install marked-rails
 
 ## Usage
 
