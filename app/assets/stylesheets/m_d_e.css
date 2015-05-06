@@ -1,0 +1,17 @@
+#mde_editor {
+  width: 48%;
+  height: 500px;
+  float: left;
+}
+#mde_preview {
+  width: 48%;
+  height: 500px;
+  overflow-y: scroll;
+  float: right;
+  border: 1px dotted #999;
+  margin-top: 5px;
+  font-size: 10px;
+}
+#mde { overflow: auto; }
+#mde:before{ overflow: auto; }
+
