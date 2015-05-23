@@ -15,7 +15,6 @@ class window.Editor
     mdm = require('ace/mode/markdown').Mode
     @aedit.getSession().setMode(new mdm())
 
-    this.setTheme 'solarized_light'
     $('#mde_preview').html(marked @aedit.getValue() )
 
     @aedit.getSession().on 'change', this._change.bind(this)
@@ -23,7 +22,7 @@ class window.Editor
 
     window.editor = this
 
-  _change: (e)->
+  _change: (e)=>
     clearTimeout(@ttimer) if @ttimer
     @ttimer = window.setTimeout(() ->
       $('#mde_preview').html(marked editor.aedit.getValue())
@@ -32,8 +31,14 @@ class window.Editor
     $("##{@input_field}").val(editor.aedit.getValue())
     true
 
-  setTheme: (name) ->
+  setTheme: (name) =>
     @aedit.setTheme @theme_prefix + name
+
+  setViMode: =>
+    @aedit.setKeyboardHandler('ace/keyboard/vim')
+
+  setEmacsMode: =>
+    @aedit.setKeyboardHandler('ace/keyboard/emacs')
 
   _syncScrolls: (val) ->
       fs = parseInt $('#mde_editor').css('font-size')

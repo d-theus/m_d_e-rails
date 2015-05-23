@@ -29,7 +29,10 @@ Or install it yourself as:
 ```javascript
 //=require 'm_d_e'
 ...
-editor = new Editor('textarea_id') // hidden textarea
+var editor = new Editor('textarea_id'); // hidden textarea
+editor.setTheme('solarized_light'); // optional
+editor.setViMode();     // enable Vi key bindings
+editor.setEmacsMode();  // you guessed!
 ```
 
 2. `application.css`:
