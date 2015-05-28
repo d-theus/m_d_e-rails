@@ -3,6 +3,8 @@
 #= require 'ace/worker-html'
 #= require 'ace/theme-solarized_dark'
 #= require 'ace/mode-markdown'
+#= require 'ace/keybinding-vim'
+#= require 'ace/keybinding-emacs'
 #
 class window.Editor
   constructor: (input_field) ->
